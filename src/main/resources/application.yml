@@ -1,0 +1,9 @@
+zuul:
+  ribbon:
+    eager-load:
+      enabled: ${ZUUL_EAGER_LOAD:false}
+  ignoredServices: '*'
+  routes:
+    demo:
+      path: /api/**
+      serviceId: consumer
